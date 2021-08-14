@@ -1,6 +1,10 @@
 const express = require("express");
 const path = require("path");
 const hbs = require("hbs");
+
+// imported User from user model.
+const User = require('./models/registers.js')
+
 const app = express();
 const port = 3000;
 require("./db/conn");
@@ -39,6 +43,7 @@ app.post('/register', async(req, res) => {
 
     })
     const registered = await registerUser.save();
+    console.log(registered)
     res.status(201).render("index");
 
   } catch(error){

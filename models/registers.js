@@ -7,4 +7,11 @@ const employeSchema = new mongoose.Schema({
     }
 })
 const user = new mongoose.model("User", employeSchema);
-module.export = Register;
+
+// eikhane Register koi pailen? 
+// Register nam e to kisu e nai,  tahole hudai ekta kisu likhe dile to
+// error dibe. 
+// module.export = Register;
+
+// user re export koren.
+module.exports = user
